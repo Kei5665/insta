@@ -37,6 +37,9 @@ gem 'slim-rails' #slim-railsの導入
 gem 'html2slim' #既存のerbやhtmlファイルをslimに変える
 gem 'rubocop' #rubocopの導入
 gem 'rubocop-rails'
+gem 'sorcery' #ユーザ認証機能を簡単に実装できるライブラリ
+gem 'redis-rails'
+gem 'annotate'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
