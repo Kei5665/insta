@@ -7,8 +7,9 @@ html
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
-  body
-    = render 'shared/flash_messages'
     - if logged_in?
-      = link_to 'ログアウト', logout_path, method: :delete
+      = render 'shared/header'
+    - else
+      = render 'shared/before_login_header'
+    = render 'shared/flash_messages'    
     = yield

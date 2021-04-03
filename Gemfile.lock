@@ -71,6 +71,8 @@ GEM
       ruby2_keywords
     faraday-net_http (1.0.1)
     ffi (1.15.0)
+    font-awesome-sass (5.0.9)
+      sass (>= 3.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hpricot (0.8.6)
@@ -261,6 +263,7 @@ DEPENDENCIES
   binding_of_caller
   bootsnap (>= 1.1.0)
   byebug
+  font-awesome-sass (< 5.0.13)
   html2slim
   jbuilder (~> 2.5)
   jquery-rails
