@@ -1,16 +1,16 @@
 require_relative 'boot'
 
-require "rails"
+require 'rails'
 # Pick the frameworks you want:
-require "active_model/railtie"
-require "active_job/railtie"
-require "active_record/railtie"
-require "active_storage/engine"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "action_cable/engine"
-require "sprockets/railtie"
+require 'active_model/railtie'
+require 'active_job/railtie'
+require 'active_record/railtie'
+require 'active_storage/engine'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'action_view/railtie'
+require 'action_cable/engine'
+require 'sprockets/railtie'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -21,13 +21,13 @@ module Insta
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-    
-        config.generators do |g|
-      g.skip_routes true #ルーティングを追加しない
-      g.assets false #アセットファイルを生成しない
-      g.test_framework false #テストを生成しない
+
+    config.generators do |g|
+      g.skip_routes true # ルーティングを追加しない
+      g.assets false # アセットファイルを生成しない
+      g.test_framework false # テストを生成しない
     end
-    config.time_zone = 'Tokyo' #タイムゾーンを設定
+    config.time_zone = 'Tokyo' # タイムゾーンを設定
     config.i18n.default_locale = :ja
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
