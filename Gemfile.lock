@@ -287,6 +287,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  mini_magick
   mysql2 (>= 0.4.4, < 0.6.0)
   popper_js
   pry-byebug
@@ -307,7 +308,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.6.4p104
+   ruby 2.6.3p62
 
 BUNDLED WITH
    1.17.3
