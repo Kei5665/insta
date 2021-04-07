@@ -20,4 +20,10 @@
 class Post < ApplicationRecord
   belongs_to :user
   mount_uploader :images, ImageUploader
+
+  serialize :images, JSON
+
+  validates :images, presence: true
+  validates :body, presence: true, length: { maximum: 1000 }
+
 end
