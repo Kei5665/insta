@@ -16,6 +16,12 @@ class PostsController < ApplicationController
       render :new
     end
   end
+  
+    def destroy
+    @post = current_user.posts.find(params[:id])
+    @post.destroy!
+    redirect_to posts_path
+    end
 
   def edit
     @post = current_user.posts.find(params[:id])
