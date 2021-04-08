@@ -19,7 +19,7 @@
 #
 class Post < ApplicationRecord
   belongs_to :user
-  mount_uploader :images, ImageUploader
+  mount_uploaders :images, ImageUploader
 
   serialize :images, JSON
 
