@@ -2,21 +2,20 @@ ja:
   activerecord:
     models:
       # view側： User.model_name.human => "ユーザ" / t("activerecord.models.user")と同じ
-      user: ユーザー 
-      
+      user: 'ユーザー' 
+      post: '投稿'
     # model毎に定義したいattributesを記述
     attributes:
         user:
-          id: ID
           # view側： User.human_attribute_name :name => "名前" /　t("activerecord.attributes.user.name")と同じ
-          username: ユーザー名
-          email: メールアドレス
-          password: パスワード
-          password_confirmation: パスワード確認
-      post:
-        images: '画像'
-        body: '本文'
+          username: 'ユーザー名'
+          email: 'メールアドレス'
+          password: 'パスワード'
+          password_confirmation: 'パスワード確認'
+        post:
+          images: '画像'
+          body: '本文'
   # 全てのmodelで共通して使用するattributesを定義
   attributes:
-    created_at: 作成日
-    updated_at: 更新日 
+    created_at: '作成日'
+    updated_at: '更新日' 
