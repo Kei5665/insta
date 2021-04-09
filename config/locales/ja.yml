@@ -3,6 +3,7 @@ ja:
     models:
       # view側： User.model_name.human => "ユーザ" / t("activerecord.models.user")と同じ
       user: ユーザー 
+      
     # model毎に定義したいattributesを記述
     attributes:
         user:
@@ -12,6 +13,9 @@ ja:
           email: メールアドレス
           password: パスワード
           password_confirmation: パスワード確認
+      post:
+        images: '画像'
+        body: '本文'
   # 全てのmodelで共通して使用するattributesを定義
   attributes:
     created_at: 作成日
