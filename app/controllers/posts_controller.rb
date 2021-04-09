@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :require_login, only: %i[new create edit update delete]
+  before_action :require_login, only: %i[new create edit update destory]
   def index
   @posts = Post.all.includes(:user)  
   end
