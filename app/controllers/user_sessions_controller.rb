@@ -5,9 +5,9 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_back_or_to posts_path, success: 'ログインしました'    else
-      flash.now[:danger] = 'ログインに失敗しました'
-      render :new
+      redirect_back_or_to posts_path, success: 'ログインしました' else
+                                                            flash.now[:danger] = 'ログインに失敗しました'
+                                                            render :new
     end
   end
 

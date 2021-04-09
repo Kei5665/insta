@@ -26,7 +26,7 @@ module Insta
       g.skip_routes true # ルーティングを追加しない
       g.assets false # アセットファイルを生成しない
       g.test_framework false # テストを生成しない
-      g.helper false# ヘルパーファイルを生成
+      g.helper false # ヘルパーファイルを生成
     end
     config.time_zone = 'Tokyo' # タイムゾーンを設定
     config.i18n.default_locale = :ja

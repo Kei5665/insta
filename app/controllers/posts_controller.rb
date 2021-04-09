@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  before_action :require_login, only: %i[new create edit update destory]
+  before_action :require_login, only: %i[new create edit update destroy]
   def index
-  @posts = Post.all.includes(:user)  
+    @posts = Post.all.includes(:user)
   end
 
   def new
@@ -17,12 +17,12 @@ class PostsController < ApplicationController
       render :new
     end
   end
-  
-    def destroy
+
+  def destroy
     @post = current_user.posts.find(params[:id])
     @post.destroy!
     redirect_to posts_path, success: '投稿を削除しました'
-    end
+  end
 
   def edit
     @post = current_user.posts.find(params[:id])
