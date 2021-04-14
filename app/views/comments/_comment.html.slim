@@ -3,6 +3,8 @@ div id="comment-#{comment.id}"
     .col-2
       = image_tag 'profile-placeholder.png', size: '40x40', class: 'rounded-circle'
     .col-9
+     span.font-weight-bold.pr-1
+      = comment.user.username
       = comment.body
     .col-1
       - if current_user&.own?(comment)
