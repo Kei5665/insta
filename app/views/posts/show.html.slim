@@ -16,6 +16,9 @@
               = icon 'far', 'trash-alt', class: 'fa-lg'
             = link_to edit_post_path(@post) do
               = icon 'far', 'edit', class: 'fa-lg'
+        - if current_user && !current_user.own?(@post)
+              .ml-auto
+                = render 'like_area', post: @post
     hr.m-0
     .post-body.p-3
       / 投稿の本文
