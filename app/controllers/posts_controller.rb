@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :require_login, only: %i[new create edit update destroy]
   def index
     @posts = Post.includes(:user).page(params[:page]).order(created_at: :desc)
+    @random_users = User.randoms(5)
   end
 
   def new

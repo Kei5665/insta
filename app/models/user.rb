@@ -26,6 +26,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :like_posts, through: :likes, source: :post
+  
+  scope :randoms, -> (count) { order("RAND()").limit(count) }
 
   def own?(object)
     id == object.user_id
