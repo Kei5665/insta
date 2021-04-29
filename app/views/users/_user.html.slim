@@ -1,4 +1,5 @@
 .user.mb-3
-  = image_tag 'profile-placeholder.png', size: '40x40', class: 'rounded-circle mr-1'
-  = user.username
+  = link_to user_path(user) do
+    = image_tag 'profile-placeholder.png', size: '40x40', class: 'rounded-circle mr-1'
+    = user.username
   hr
