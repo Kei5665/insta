@@ -1,2 +1,0 @@
-class RerationshipsController < ApplicationController
-
