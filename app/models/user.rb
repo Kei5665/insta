@@ -35,7 +35,7 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
   
-  scope :randoms, -> (count) { order("RAND()").limit(count) }
+  scope :randoms, -> (count) { order('RAND()').limit(count) }
 
   def own?(object)
     id == object.user_id
@@ -63,6 +63,10 @@ class User < ApplicationRecord
 
   def following?(other_user)
     following.include?(other_user)
+  end
+  
+  def feed
+    Post.where(user_id: following_ids << id)
   end
   
 end
