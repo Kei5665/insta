@@ -5,7 +5,7 @@ class PostsController < ApplicationController
                current_user.feed.includes(:user).page(params[:page])
              else
                Post.all.includes(:user).page(params[:page])
-             end    
+             end
     @random_users = User.randoms(5)
   end
 
