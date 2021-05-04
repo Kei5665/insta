@@ -6,7 +6,7 @@ class PostsController < ApplicationController
              else
                Post.all.includes(:user).page(params[:page])
              end
-    @random_users = User.randoms(5)
+    @users = User.recent(5)
   end
 
   def new
