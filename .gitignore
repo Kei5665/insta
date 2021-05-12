@@ -25,3 +25,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# アップロードファイルをgit管理対象外にした
+/public/uploads
