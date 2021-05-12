@@ -28,3 +28,5 @@
 
 # アップロードファイルをgit管理対象外にした
 /public/uploads
+
+dump.rdb
