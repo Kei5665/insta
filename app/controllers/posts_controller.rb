@@ -48,6 +48,10 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user).order(created_at: :desc)
     @comment = Comment.new
   end
+  
+  def search
+    @posts = @search_form.search.includes(:user).page(params[:page])
+  end
 
   private
 
